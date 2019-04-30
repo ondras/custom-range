@@ -1,0 +1,19 @@
+{
+  "name": "x-range",
+  "version": "1.0.0",
+  "description": "",
+  "main": "x-range.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ondras/x-range.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ondras/x-range/issues"
+  },
+  "homepage": "https://github.com/ondras/x-range#readme"
+}

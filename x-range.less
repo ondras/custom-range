@@ -1,0 +1,70 @@
+x-range {
+	--thumb-size: 8px;
+	--thumb-color: #fff;
+	--thumb-shadow: #000;
+	--thumb-hover-color: #ddd;
+	--track-size: 4px;
+	--track-color: #888;
+	--track-shadow: #000;
+	--elapsed-color: #ddd;
+	--remaining-color: transparent;
+
+	--radius: calc(var(--track-size)/2);
+
+	width: 192px;
+	height: 16px;
+	position: relative;
+
+	.-track, .-elapsed, .-remaining {
+		position: absolute;
+		top: calc(50% - var(--track-size)/2);
+		height: var(--track-size);
+		border-radius: var(--radius);
+	}
+
+	.-track {
+		width: 100%;
+		left: 0;
+		background-color: var(--track-color);
+		box-shadow: 0 0 1px var(--thumb-shadow);
+	}
+
+	.-elapsed {
+		left: 0;
+		background-color: var(--elapsed-color);
+	}
+	
+	.-remaining {
+		right: 0;
+		background-color: var(--remaining-color);
+	}
+
+	.-inner {
+		position: absolute;
+		left: var(--thumb-size);
+		right: var(--thumb-size);
+		top: 0;
+		bottom: 0;
+	}
+
+	.-thumb {
+		all: unset;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+		border-radius: 50%;
+		width: calc(2*var(--thumb-size));
+		height: calc(2*var(--thumb-size));
+		background-color: var(--thumb-color);
+		box-shadow: 0 0 2px var(--thumb-shadow);
+	}
+
+	&[disabled] {
+		opacity: 0.5;
+	}
+
+	&:not([disabled]) .-thumb:hover {
+		background-color: var(--thumb-hover-color);
+	}
+}
