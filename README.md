@@ -29,16 +29,18 @@ No idea.
 Mostly via [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*). Here are the defaults:
 
 ```css
---thumb-size: 8px;
---thumb-color: #fff;
---thumb-shadow: #000;
---thumb-hover-color: #ddd;
+x-range {
+	--thumb-size: 8px;
+	--thumb-color: #fff;
+	--thumb-shadow: #000;
+	--thumb-hover-color: #ddd;
 
---track-size: 4px;
---track-color: #888;
---track-shadow: #000;
+	--track-size: 4px;
+	--track-color: #888;
+	--track-shadow: #000;
 
---elapsed-color: #ddd;
+	--elapsed-color: #ddd;
 
---remaining-color: transparent;
+	--remaining-color: transparent;
+}
 ```
