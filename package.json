@@ -1,8 +1,8 @@
 {
-  "name": "x-range",
+  "name": "custom-range",
   "version": "1.0.0",
   "description": "",
-  "main": "x-range.js",
+  "main": "range.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
