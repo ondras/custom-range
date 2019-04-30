@@ -6,22 +6,6 @@ class Range extends HTMLElement {
 
 		this._dom = {};
 
-		this.innerHTML = `
-			<span class="-track"></span>
-			<span class="-elapsed"></span>
-			<span class="-remaining"></span>
-			<div class="-inner">
-				<button class="-thumb"></button>
-			</div>
-		`;
-
-		Array.from(this.querySelectorAll("[class^='-']")).forEach(node => {
-			let name = node.className.substring(1);
-			this._dom[name] = node;
-		});
-
-		this._update();
-
 		this.addEventListener("mousedown", this);
 		this.addEventListener("keydown", this);
 	}
@@ -54,6 +38,26 @@ class Range extends HTMLElement {
 	set step(step) { this.setAttribute("step", step); }
 	set disabled(disabled) {
 		disabled ? this.setAttribute("disabled", "") : this.removeAttribute("disabled");
+	}
+
+	connectedCallback() {
+		if (this.firstChild) { return; }
+
+		this.innerHTML = `
+			<span class="-track"></span>
+			<span class="-elapsed"></span>
+			<span class="-remaining"></span>
+			<div class="-inner">
+				<button class="-thumb"></button>
+			</div>
+		`;
+
+		Array.from(this.querySelectorAll("[class^='-']")).forEach(node => {
+			let name = node.className.substring(1);
+			this._dom[name] = node;
+		});
+
+		this._update();
 	}
 
 	attributeChangedCallback(name, oldValue, newValue) {

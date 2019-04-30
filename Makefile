@@ -1,9 +1,17 @@
 LESS := $(shell npm bin)/lessc
+SOURCE := range.less
+TARGET := range.css
 
-range.css: range.less
+all: $(TARGET)
+
+$(TARGET): $(SOURCE)
 	$(LESS) $^ > $@
 
-clean:
-	rm -f range.css
+watch: all
+	while inotifywait -e MODIFY $(SOURCE) ; do make $^ ; done
 
-.PHONY: clean
+clean:
+	rm -f $(TARGET)
+
+.PHONY: all clean watch
+
