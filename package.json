@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ondras/x-range/issues"
   },
-  "homepage": "https://github.com/ondras/x-range#readme"
+  "homepage": "https://github.com/ondras/x-range#readme",
+  "devDependencies": {
+    "less": "^3.9.0"
+  }
 }
