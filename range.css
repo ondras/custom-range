@@ -1,8 +1,8 @@
 x-range {
   --thumb-size: 8px;
-  --thumb-color: #fff;
+  --thumb-color: #ddd;
   --thumb-shadow: #000;
-  --thumb-hover-color: #ddd;
+  --thumb-hover-color: #fff;
   --track-size: 4px;
   --track-color: #888;
   --track-shadow: #000;
