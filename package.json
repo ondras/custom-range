@@ -1,6 +1,6 @@
 {
   "name": "custom-range",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "",
   "main": "range.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ondras/x-range.git"
+    "url": "git+https://github.com/ondras/custom-range.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ondras/x-range/issues"
+    "url": "https://github.com/ondras/custom-range/issues"
   },
-  "homepage": "https://github.com/ondras/x-range#readme",
+  "homepage": "https://github.com/ondras/custom-range",
   "devDependencies": {
     "less": "^3.9.0"
   }

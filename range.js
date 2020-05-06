@@ -61,6 +61,8 @@ class Range extends HTMLElement {
 	}
 
 	attributeChangedCallback(name, oldValue, newValue) {
+		if (!this.firstChild) { return; }
+
 		switch (name) {
 			case "min":
 			case "max":
